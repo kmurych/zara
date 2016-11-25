@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  VK.init({
+           apiId: 5746041
+		  });
+</script>
+<script>
+    $("#get_photo").click( function(){
+	VK.api("users.get", { user_ids: id153883503, fields: "photo_200"}, function (data)
+	console.log(data);
+	$("#vk_avatar").attr("src", data.response[0].photo_200); 
+}); 
+}); 
+</script> 
+<img src="4.jpg" id="vk_avatar"> 
+<button id="get_photo"> VK Avatar </button> 
+</body> 
+</html>
